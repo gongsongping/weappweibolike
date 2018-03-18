@@ -1,18 +1,27 @@
 // pages/help/help.js
+const app = getApp()
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    userInfo: null,
+    hasUseInfo: false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    console.log(app.globalData.userInfo)    
+    if (app.globalData.userInfo) {
+      this.setData({
+        userInfo: app.globalData.userInfo,
+        hasUserInfo: true
+      })
+    }
   },
 
   /**
@@ -26,7 +35,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+     console.log('onshow')
   },
 
   /**
@@ -62,5 +71,13 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  logout: function () {
+    app.globalData.userInfo = null
+    console.log(app.globalData.userInfo )
+    this.setData({
+      // userInfo: app.globalData.userInfo,
+      hasUserInfo: false
+    })
   }
 })

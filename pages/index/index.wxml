@@ -1,5 +1,31 @@
+<view style='padding:10rpx;'>
+  <scroll-view scroll-y="true" bindscrolltolower="onReachBottom" bindscrolltoupper="onReachTop">
+    <view wx:for='{{tweets}}' style='padding-bottom:10rpx;'>
+      <view style='display:flex;flex-direction:row;'>
+        <view style='display:flex;flex-direction:row;justify-content:center;align-items:center;'>
+          <view style='flex:2;background-color:tomato;border-radius:50%;width:70rpx;height:70rpx;'>
+             <image src='{{item.avatar_url}}' mode='aspectFill' style='border-radius:50%;width:70rpx;height:70rpx;'></image> 
+          </view>
+        </view>
+        <view style='flex:8;padding-left:20rpx;'>
+          <view>{{item.name}}</view>
+          <view style='font-size:0.8em;'>2-7 13:50:22</view>
+        </view>
+      </view>
+      <view style='padding:10rpx;font-size:0.9em;'>
+        <text>{{item.tweet}}</text>
+      </view>
+      <view style='display:flex;flex-direction:row;justify-content:space-around;align-items:center;padding:20rpx; border-top: 0.5rpx solid lightgrey; border-bottom: 15rpx solid lightgrey;'>
+        <text style='color:lightgrey;' class='fa fa-external-link'></text>
+        <text style='color:lightgrey;' class='fa fa-folder'></text>
+        <text style='color:lightgrey;' class='fa fa-thumbs-up'></text>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
 <!--index.wxml-->
-<view class="container">
+<!-- <view class="container">
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
@@ -8,6 +34,8 @@
     </block>
   </view>
   <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+    <navigator url="../logs/logs?title=navigate"><button> go logs</button> </navigator>
+    <text class="user-motto">{{motto}}</text>   <text>  </text>
+    <text style="color:tomato;" class="fa fa-flag"></text>
   </view>
-</view>
+</view> -->

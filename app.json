@@ -19,14 +19,14 @@
       {
         "pagePath": "pages/index/index",
         "text": "主页",
-        "iconPath": "images/icon-s.png",
-        "selectedIconPath": "images/icon-s.png"
+        "iconPath": "images/home-off.png",
+        "selectedIconPath": "images/home-on.png"
       },
       {
         "pagePath": "pages/help/help",
         "text": "帮助",
-        "iconPath": "images/icon-s.png",
-        "selectedIconPath": "images/icon-s.png"
+        "iconPath": "images/help-off.png",
+        "selectedIconPath": "images/help-on.png"
       }
     ]
   }

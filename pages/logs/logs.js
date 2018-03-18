@@ -10,7 +10,8 @@ Page({
       url: '../index/index'
     })
   },
-  onLoad: function () {
+  onLoad: function (option) {
+    console.log(option.title||'notitle');
     this.setData({
       logs: (wx.getStorageSync('logs') || []).map(log => {
         return util.formatTime(new Date(log))

@@ -1,4 +1,5 @@
 <!--pages/help/help.wxml-->
 <view>
   <text>pages/help/help.wxml</text>
+  <button bindtap="logout" wx:if="{{hasUserInfo}}">logout</button>
 </view>
