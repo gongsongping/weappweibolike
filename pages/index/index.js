@@ -33,6 +33,12 @@ Page({
         avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg',
         images: 'https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg',
         tweet: '以前我很怕得罪人，不敢迟到，不敢要求，不敢说错话，怕冷场，怕对方不高兴，诚惶诚恐的面对所有人。遗憾的是，我并没有得到相应的尊重。后来，我开始宠爱和迁就自己，你迟到我先走，不想做绝不勉强，冷场就玩手机，多顾个人感受，其他人关我屁事。然后发现，我不但被重视，而且更开心了。——易术 '
+      },
+      {
+        name: '妻弄',
+        avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg',
+        images: 'https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg',
+        tweet: '以前我很怕得罪人，不敢迟到，不敢要求，不敢说错话，怕冷场，怕对方不高兴，诚惶诚恐的面对所有人。遗憾的是，我并没有得到相应的尊重。后来，我开始宠爱和迁就自己，你迟到我先走，不想做绝不勉强，冷场就玩手机，多顾个人感受，其他人关我屁事。然后发现，我不但被重视，而且更开心了。——易术 '
       }
     ]
   },
@@ -112,5 +118,10 @@ Page({
     this.setData({
       tweets: this.data.tweets.concat(this.data.list)
     })
+    // wx.showToast({
+    //   title: '成功',
+    //   icon: 'success',
+    //   duration: 1000
+    // })
   }  
 })

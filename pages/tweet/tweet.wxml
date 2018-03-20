@@ -12,8 +12,8 @@
         <view style='font-size:0.8em;'>2-7 13:50:22 {{JSON.stringify([1])}}</view>
       </view>
     </view>
-    <view style='padding:10rpx;font-size:0.9em;'>
-      <text>{{tweet.tweet}}</text>
+    <view style='padding:10rpx;'>
+      <text style='padding:10rpx;line-height:1.5em;'>{{tweet.tweet}}</text>
     </view>
     <view style='display:flex;flex-direction:row;justify-content:space-around;align-items:center;padding:20rpx; border-top: 0.5rpx solid lightgrey; border-bottom: 15rpx solid lightgrey;'>
       <text style='color:lightgrey;' class='fa fa-external-link'></text>
@@ -21,7 +21,16 @@
       <text style='color:lightgrey;' class='fa fa-thumbs-up'></text>
     </view>
   </view>
-
-  <!-- <scroll-view scroll-y="true" bindscrolltolower="onReachBottom" bindscrolltoupper="onReachTop">
-  </scroll-view> -->
+  <view style='height:30px;border-bottom:0.5px solid lightgrey;'>{{comments.length}}条评论</view>
+  <view wx:for='{{comments}}'>
+    <view data-tweet='{{item}}' bindtap='tousertweets' style='padding:5rpx;display:flex;flex-direction:row;'>
+      <view style='flex:1; padding:5rpx;'>
+        <image src='{{item.avatar_url}}' mode='aspectFill' style='border-radius:50%;width:70rpx;height:70rpx;'></image>
+      </view>
+      <view style='border-bottom:0.5px solid lightgrey; flex:9; padding-left:20rpx;'>
+        <view  style='font-size:0.9em;'>{{item.tweet}}</view>
+        <view style='font-size:0.7em;'>2-7 13:50:22 {{JSON.stringify([1])}}</view>
+      </view>
+    </view>
+  </view>
 </view>

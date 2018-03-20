@@ -15,7 +15,7 @@ Page({
   onLoad: function (options) {
     let twt = JSON.parse(options.twt)
     let arr = []
-    arr.push(twt, twt, twt, twt, twt)
+    arr.push(twt, twt, twt, twt, twt,twt)
     this.setData({
       tweet: twt,
       tweets: this.data.tweets.concat(arr)
@@ -41,7 +41,7 @@ Page({
   onReachBottom: function () {
     console.log("上滑");
     let arr = []
-    arr.push(this.data.tweet, this.data.tweet, this.data.tweet, this.data.tweet, this.data.tweet)
+    arr.push(this.data.tweet, this.data.tweet, this.data.tweet, this.data.tweet, this.data.tweet, this.data.tweet)
     this.setData({
       tweet: this.data.tweet,
       tweets: this.data.tweets.concat(arr)
@@ -86,20 +86,6 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
   
   },
 

@@ -1,6 +1,6 @@
 <!--pages/usertweets/usertweets.wxml-->
 <view style='padding:10rpx;height:100%;'>
-  <scroll-view scroll-y="true" lower-threshold='100' bindscrolltolower="onReachBottom">
+  <!-- <scroll-view scroll-y="true" lower-threshold='100' bindscrolltolower="onReachBottom"> -->
     <view wx:for='{{tweets}}' wx:key="{{index}}" style='padding-bottom:10rpx;'>
       <view data-tweet='{{item}}' bindtap='tousertweets' style='display:flex;flex-direction:row;'>
         <view style='display:flex;flex-direction:row;justify-content:center;align-items:center;'>
@@ -13,8 +13,8 @@
           <view style='font-size:0.8em;'>2-7 13:50:22 {{JSON.stringify([1])}}</view>
         </view>
       </view>
-      <view data-tweet='{{item}}' bindtap='totweet' style='padding:10rpx;font-size:0.9em;'>
-        <text>{{item.tweet}}</text>
+      <view data-tweet='{{item}}' bindtap='totweet' style='padding:10rpx;'>
+        <text style='padding:10rpx;line-height:1.5em;'>{{item.tweet}}</text>
       </view>
       <view style='display:flex;flex-direction:row;justify-content:space-around;align-items:center;padding:20rpx; border-top: 0.5rpx solid lightgrey; border-bottom: 15rpx solid lightgrey;'>
         <text style='color:lightgrey;' class='fa fa-external-link'></text>
@@ -22,5 +22,5 @@
         <text style='color:lightgrey;' class='fa fa-thumbs-up'></text>
       </view>
     </view>
-  </scroll-view>
+  <!-- </scroll-view> -->
 </view>

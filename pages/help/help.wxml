@@ -1,5 +1,21 @@
 <!--pages/help/help.wxml-->
-<view>
-  <text>pages/help/help.wxml</text>
-  <button bindtap="logout" wx:if="{{hasUserInfo}}">logout</button>
+<view style='padding:5px;'>
+  <view style='height:60rpx; display:flex; flex-direction: row; padding:3px; border-bottom:0.5px solid lightgrey;'>
+    <view style='flex:1;'>
+      <text style="color:grey;" class="fa fa-archive"></text>
+    </view>
+    <view style='flex:6;'> test </view>
+    <view style='flex:1;'>
+      <text style="color:lightgrey;" class="fa fa-arrow-right"></text>      
+    </view>
+  </view>
+  <view style='height:60rpx; display:flex; flex-direction: row; padding:3px; border-bottom:0.5px solid lightgrey;'>
+    <view style='flex:1;'>
+      <text style="color:grey;" class="fa fa-archive"></text>
+    </view>
+    <view style='flex:6;'> details </view>
+    <view style='flex:1;'>
+      <text style="color:lightgrey;" class="fa fa-arrow-right"></text>      
+    </view>
+  </view>
 </view>
