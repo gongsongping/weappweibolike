@@ -1,5 +1,6 @@
-<view style='padding:10rpx;'>
-  <scroll-view scroll-y="true" bindscrolltolower="onReachBottom" bindscrolltoupper="onReachTop">
+<!--pages/usertweets/usertweets.wxml-->
+<view style='padding:10rpx;height:100%;'>
+  <scroll-view scroll-y="true" lower-threshold='100' bindscrolltolower="onReachBottom">
     <view wx:for='{{tweets}}' wx:key="{{index}}" style='padding-bottom:10rpx;'>
       <view data-tweet='{{item}}' bindtap='tousertweets' style='display:flex;flex-direction:row;'>
         <view style='display:flex;flex-direction:row;justify-content:center;align-items:center;'>
@@ -23,19 +24,3 @@
     </view>
   </scroll-view>
 </view>
-
-<!--index.wxml-->
-<!-- <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <navigator url="../logs/logs?title=navigate"><button> go logs</button> </navigator>
-    <text class="user-motto">{{motto}}</text>   <text>  </text>
-    <text style="color:tomato;" class="fa fa-flag"></text>
-  </view>
-</view> -->

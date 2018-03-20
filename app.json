@@ -2,14 +2,17 @@
   "pages": [
     "pages/index/index",
     "pages/help/help",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/tweet/tweet",
+    "pages/usertweets/usertweets"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
-  },
+  }
+  ,
   "tabBar": {
     "color": "grey",
     "selectedColor": "#1296db",

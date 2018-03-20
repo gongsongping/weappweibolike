@@ -37,9 +37,17 @@ Page({
     ]
   },
   //事件处理函数
-  bindViewTap: function() {
+  totweet: function(e) {
+    let twt = e.currentTarget.dataset.tweet
     wx.navigateTo({
-      url: '../logs/logs'
+      url: '../tweet/tweet?twt='+JSON.stringify(twt)
+    })
+  },
+  tousertweets: function(e) {
+    let twt = e.currentTarget.dataset.tweet
+    // console.log(twt)
+    wx.navigateTo({
+      url: '../usertweets/usertweets?twt=' + JSON.stringify(twt)
     })
   },
   onLoad: function () {
